@@ -932,10 +932,10 @@ Tutorial.prototype.$initializeExerciseEditors = function() {
 
     // create submit answer button if checks are enabled
     if (thiz.$exerciseCheckCode(label) !== null)
-      add_submit_button("fa-check-square-o", "btn-primary", "Submit Answer", true);
+      add_submit_button("fa-check-square-o", "btn-primary", "Proposer sa réponse", true);
 
     // create run button
-    var run_button = add_submit_button("fa-play", "btn-success", "Run Code", false);
+    var run_button = add_submit_button("fa-play", "btn-success", "Executer", false);
 
     // create code div and add it to the input div
     var code_div = $('<div class="tutorial-exercise-code-editor"></div>');
@@ -1094,7 +1094,7 @@ Tutorial.prototype.$addSolution = function(exercise, panel_heading, editor) {
 
   // add a startover button
   if (editor.tutorial.startover_code !== null) {
-    var startOverButton = addHelperButton("fa-refresh", "Start Over");
+    var startOverButton = addHelperButton("fa-refresh", "Remettre à zéro");
     startOverButton.on('click', function() {
       editor.setValue(editor.tutorial.startover_code, -1);
       thiz.$clearExerciseOutput(exercise);
@@ -1109,7 +1109,7 @@ Tutorial.prototype.$addSolution = function(exercise, panel_heading, editor) {
     hintDiv.css('display', 'none');
 
     // create hint button
-    var button = addHintButton("Hint");
+    var button = addHintButton("Indice");
 
     // handle showing and hiding the hint
     button.on('click', function() {
@@ -1143,9 +1143,9 @@ Tutorial.prototype.$addSolution = function(exercise, panel_heading, editor) {
     }
     else {
       if (hints.length > 1)
-        caption = "Hints";
+        caption = "Indices";
       else
-        caption = "Hint";
+        caption = "Indice";
     }
 
     // determine editor lines
@@ -1206,7 +1206,7 @@ Tutorial.prototype.$addSolution = function(exercise, panel_heading, editor) {
           // add next hint button if we have > 1 hint
           if (solution === null && hints.length > 1) {
             var nextHintButton = $('<a class="btn btn-light btn-xs btn-tutorial-next-hint"></a>');
-            nextHintButton.append("Next Hint ");
+            nextHintButton.append("Indice suivant ");
             nextHintButton.append($('<i class="fa fa-angle-double-right"></i>'));
             nextHintButton.on('click', function() {
               hintIndex = hintIndex + 1;
@@ -1224,7 +1224,7 @@ Tutorial.prototype.$addSolution = function(exercise, panel_heading, editor) {
           var copyButton = $('<a class="btn btn-info btn-xs ' +
                              'btn-tutorial-copy-solution pull-right"></a>');
           copyButton.append($('<i class="fa fa-copy"></i>'));
-          copyButton.append(" Copy to Clipboard");
+          copyButton.append(" Copier le contenu");
           popoverTitle.append(copyButton);
           var clipboard = new Clipboard(copyButton[0], {
             text: function(trigger) {

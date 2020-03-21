@@ -222,7 +222,7 @@ $(document).ready(function() {
           topicActions.append(prevButton);
         }
         if (topicIndex < topicsDOM.length - 1) {
-          var nextButton = $('<button class="btn btn-primary">Next Topic</button>');
+          var nextButton = $('<button class="btn btn-primary">Suivant</button>');
           nextButton.on('click', handleNextTopicClick);
           topicActions.append(nextButton);
         }
@@ -233,7 +233,7 @@ $(document).ready(function() {
         sectionsDOM.each( function( sectionIndex, sectionElement) {
 
           if (topic.progressiveReveal) {
-            var continueButton = $('<button class="btn btn-default skip" data-section-id="' + sectionElement.id + '">Continue</button>');
+            var continueButton = $('<button class="btn btn-default skip" data-section-id="' + sectionElement.id + '">Continuer</button>');
             continueButton.on('click', handleSkipClick);
             var actions = $('<div class="exerciseActions"></div>');
             actions.append(continueButton);
@@ -271,9 +271,9 @@ $(document).ready(function() {
 
       var topicsFooter = $('<div class="topicsFooter"></div>');
 
-      var resetButton = $('<span class="resetButton">Start Over</span>');
+      var resetButton = $('<span class="resetButton">Remettre à zéro</span>');
       resetButton.on('click', function() {
-        bootbox.confirm("Are you sure you want to start over? (all exercise progress will be reset)",
+        bootbox.confirm("Voulez vous vraiment tout effacer et repartir à zéro ?",
                         function(result) {
                           if (result)
                             tutorial.startOver();
