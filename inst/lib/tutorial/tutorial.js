@@ -932,7 +932,7 @@ Tutorial.prototype.$initializeExerciseEditors = function() {
 
     // create submit answer button if checks are enabled
     if (thiz.$exerciseCheckCode(label) !== null)
-      add_submit_button("fa-check-square-o", "btn-primary", "Proposer sa réponse", true);
+      add_submit_button("fa-check-square-o", "btn-primary", "Valider la réponse", true);
 
     // create run button
     var run_button = add_submit_button("fa-play", "btn-success", "Executer", false);
