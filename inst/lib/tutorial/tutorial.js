@@ -935,7 +935,7 @@ Tutorial.prototype.$initializeExerciseEditors = function() {
       add_submit_button("fa-check-square-o", "btn-primary", "Valider la réponse", true);
 
     // create run button
-    var run_button = add_submit_button("fa-play", "btn-success", "Executer", false);
+    var run_button = add_submit_button("fa-play", "btn-success", "Exécuter", false);
 
     // create code div and add it to the input div
     var code_div = $('<div class="tutorial-exercise-code-editor"></div>');
